@@ -1,7 +1,9 @@
 $('.btn').click(() => {
     $('ul').append(`<li>${$('.todo-text').val()}</li>`);
+    console.log($('.todo-text').val());
     $('li:last-child').click((event) => {
         $(event.target).toggleClass('completed');
+        
         });
     $('.todo-text').val('');
 });
@@ -11,12 +13,3 @@ $('.btn').click(() => {
 
 
 
-// Extra version with completing todos
-
-// $('button').click(() => {
-//   $('ul').append(`<li>${$('input').val()}</li>`);
-//   $('li:last-child').click((event) => {
-//     $(event.target).toggleClass('completed');
-//   });
-//   $('input').val('');
-// });
